@@ -1,0 +1,14 @@
+
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+    Sales {{ object.transaction_id }}
+{% endblock title %}
+
+{% block content %}
+    {{ object.pk }}
+    {{ object.transaction_id }}
+{% endblock %}
+
+
+

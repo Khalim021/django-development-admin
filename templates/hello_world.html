@@ -1,0 +1,33 @@
+{% extends 'layouts/base.html' %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+{% block title %}
+    home
+{% endblock title %}
+
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+    <button type="submit" class="btn btn-primary mt-3">Search</button>
+    </form>
+    <br>
+    {% if df1 %}
+        {{ df1|safe }}
+        <br>
+        {{ positions_df|safe }}
+    {% else %}
+        <h3>No Data sorry</h3>
+    {% endif %}
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
